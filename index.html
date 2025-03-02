@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zana Fishing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+    
+        }
+        header {
+            background: blue;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 30%;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background: #5cb85c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #4cae4c;
+        }
+        #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        #cart-items {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zana Fishing</h1>
+    </header>
+    <div id="cart">
+        <h3>Kosár</h3>
+        <ul id="cart-items"></ul>
+        <p><strong>Összeg: <span id="total-price">0</span> Ft</strong></p>
+        <button onclick="checkout()" class="btn">Fizetés</button>
+    </div>
+    <div class="container">
+
+        <div class="product" data-name="Zana pop up" data-price="2490">
+            <img src="csali.JPEG" alt="Csali">
+            <h2>Zana pop up</h2>
+            <p>Fűszeres pop up csali.</p>
+            <p><strong>Ára: 2 490 Ft</strong></p>
+            <button onclick="addToCart(this)" class="btn">Kosárba</button>
+        </div>
+    </div>
+    <script>
+        let cart = [];
+        
+        function addToCart(button) {
+            let product = button.parentElement;
+            let name = product.getAttribute("data-name");
+            let price = parseInt(product.getAttribute("data-price"));
+            cart.push({ name, price });
+            updateCart();
+        }
+        
+        function updateCart() {
+            let cartItems = document.getElementById("cart-items");
+            let totalPrice = document.getElementById("total-price");
+            cartItems.innerHTML = "";
+            let total = 0;
+            cart.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = `${item.name} - ${item.price} Ft`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+            totalPrice.textContent = total;
+        }
+        
+        function checkout() {
+            alert("Fizetés sikeres! Köszönjük a vásárlást!");
+            cart = [];
+            updateCart();
+        }
+    </script>
+</body>
+</html>
