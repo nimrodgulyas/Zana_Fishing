@@ -1,0 +1,10 @@
+header {
+    background: url('halak.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px; /* Állítsd be a kívánt magasságot */
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
