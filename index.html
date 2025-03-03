@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -12,10 +13,11 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             text-align: center;
            margin-left: 1400px;
+           margin-top: 550px;
           }
           
     div.header {
-      background-color: rgb(0, 153, 255);
+            background-color: rgb(90, 79, 61);
             color: white;
             padding: 10px;
             font-size: 13px;
@@ -31,55 +33,14 @@
           </style>
 <body>
     <header>
-        <h1><span>Zana Fishing</span></h1>
+        <img src="logo.png" alt="" >
+        <a href="#"><button>Főoldal</button></a>
+        <a href="termekek.html"><button class="termek">Termékeink</button></a> 
+ 
     </header>
-    <div id="cart">
-        <h3>Kosár</h3>
-        <ul id="cart-items"></ul>
-        <p><strong>Összeg: <span id="total-price">0</span> Ft</strong></p>
-        <button onclick="checkout()" class="btn">Fizetés</button>
-    </div>
-    <div class="container">
+   
 
-        <div class="product" data-name="Zana pop up" data-price="2490">
-            <img src="csali.JPEG" alt="Csali">
-            <h2>Zana pop up</h2>
-            <p>Fűszeres pop up csali.</p>
-            <p><strong>Ára: 2 490 Ft</strong></p>
-            <button onclick="addToCart(this)" class="btn">Kosárba</button>
-        </div>
-    </div>
-    <script>
-        let cart = [];
-        
-        function addToCart(button) {
-            let product = button.parentElement;
-            let name = product.getAttribute("data-name");
-            let price = parseInt(product.getAttribute("data-price"));
-            cart.push({ name, price });
-            updateCart();
-        }
-        
-        function updateCart() {
-            let cartItems = document.getElementById("cart-items");
-            let totalPrice = document.getElementById("total-price");
-            cartItems.innerHTML = "";
-            let total = 0;
-            cart.forEach(item => {
-                let li = document.createElement("li");
-                li.textContent = `${item.name} - ${item.price} Ft`;
-                cartItems.appendChild(li);
-                total += item.price;
-            });
-            totalPrice.textContent = total;
-        }
-        
-        function checkout() {
-            alert("Fizetés sikeres! Köszönjük a vásárlást!");
-            cart = [];
-            updateCart();
-        }
-    </script>
+    
 
 <div class="card">
     <div class="header">
@@ -88,7 +49,7 @@
     </div>
   
     <div class="container1">
-      <p>+36 123 456 78</p>
+      <p><a href="tel:06703322145">+36 70 332 2145</a></p>
     </div>
   </div>
 
