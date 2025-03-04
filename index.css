@@ -17,7 +17,8 @@ header img {
 }
 header a{
 
-    margin: auto;
+    margin-left: 10%;
+    margin-top: 1.8%;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;

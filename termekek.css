@@ -17,7 +17,8 @@ header img {
 }
 header a{
 
-    margin: auto;
+    margin-left: 10%;
+    margin-top: 1.8%;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -45,6 +46,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 15%;
+    color: white;
 }
 
 .product img {
