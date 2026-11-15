@@ -1,0 +1,96 @@
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zana Fishing</title>
+    <link rel="stylesheet" href="rolunk.css">
+
+    <style>
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=uzenet]{
+          width: 100%;
+          padding: 50px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+
+
+
+        input[type=submit] {
+          width: 100%;
+          background-color: rgb(201, 153, 76);
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          opacity: 50%;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #f2f2f200;
+          padding: 175px;
+          color: white;
+        }
+
+        </style>
+
+</head>
+<header>
+    <img src="logo.png" alt="" >
+    <a href="index.html"><button>Főoldal</button></a>
+    <a href="termekek.html"><button class="termek">Termékeink</button></a> 
+    <a href="akciok.html"><button>Akciók</button></a>
+    <a href="rolunk.html"><button>Kapcsolat</button></a>
+     
+
+</header>
+<body>
+
+
+
+
+
+    <div>
+        <form action="https://formsubmit.co/ebc8d271653e857aacfb2be36e9a71b2" method="POST">
+          <label for="fname">Teljes név</label>
+          <input type="text" id="nev" name="Név" placeholder="Név...">
+    
+
+          <label for="email">E-mail cím</label>
+          <input type="text" id="email" name="E-mail" placeholder="E-mail...">
+      
+          <label for="email">Üzenet</label>
+          <input type="uzenet" id="uzenet" name="Üzenet" placeholder="Írd üzeneted ide...">
+
+
+          <label for="orszag">Ország</label>
+          <select id="orszag" name="country">
+            <option value="Magyarorszag">Magyarország</option>
+           <option value="Ausztria">Ausztria</option>
+          </select>
+        
+          <input type="submit" value="Küldés">
+
+        </form>
+      </div>
+</body>
+</html>
